@@ -46,14 +46,23 @@ public class Student {
                 .map(Map.Entry::getValue)
                 .reduce(0, Integer::sum);
 
+        return returnWorkingHoursMessage(hours);
+    }
+
+    public String retrieveWorkingHours(Integer hours) throws Exception {
+       return returnWorkingHoursMessage(hours);
+    }
+
+
+    private String returnWorkingHoursMessage(Integer hours) throws Exception{
         if (hours > maxHours) {
-            throw new Exception("You can't follow more than 30 hours in a week");
+            throw new Exception("You can't attend more than 30 hours in a week");
         }
 
         if (hours < maxHours) {
-            return "This week you have a plan to attend " + hours + " hours of teaching. You have " + (maxHours - hours) + " hours left unused";
+            return "This week you have a plan to attend " + hours + " hours of teaching. You have " + (maxHours - hours) + " hours left";
         }
 
-        return "This week you have a plan to attend " + hours + " hours of teaching.";
+        return "This week you have a plan to attend " + hours + " hours of classes.";
     }
 }

@@ -1,4 +1,4 @@
-package java_bean_configuration_lab_1;
+package com.cybertek.ioc_di_lab1;
 
 public enum Title {
     JAVA,

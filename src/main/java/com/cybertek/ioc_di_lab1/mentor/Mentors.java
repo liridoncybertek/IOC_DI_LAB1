@@ -1,7 +1,7 @@
 package com.cybertek.ioc_di_lab1.mentor;
 
+import com.cybertek.ioc_di_lab1.Title;
 import com.cybertek.ioc_di_lab1.instructor.Instructor;
-import java_bean_configuration_lab_1.Title;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -36,6 +36,24 @@ public class Mentors implements Instructor {
                 return "Java Mentor";
             default:
                 return "This mentor is not present in our area yet!";
+        }
+    }
+
+    /**
+     * Get working hours as integer.
+     * @param title param title
+     * @return working
+     */
+    public Integer getWorkingHours(Title title) {
+        switch (title) {
+            case JAVA:
+                return 25;
+            case API:
+                return 5;
+            case SELENIUM:
+                return 40;
+            default:
+                return 0;
         }
     }
 }

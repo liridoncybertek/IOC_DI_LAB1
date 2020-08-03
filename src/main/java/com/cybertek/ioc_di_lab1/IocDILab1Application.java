@@ -18,23 +18,28 @@ public class IocDILab1Application {
         // Declare student bean.
         Student students = bean.getBean(Student.class);
 
-        System.out.println("Instructor title is: " + instructors.getInstructorTitle(java_bean_configuration_lab_1.Title.API));
-        System.out.println("Instructor title is: " + instructors.getInstructorTitle(java_bean_configuration_lab_1.Title.JAVA));
-        System.out.println("Instructor title is: " + instructors.getInstructorTitle(java_bean_configuration_lab_1.Title.SELENIUM));
+        System.out.println("Instructor title is: " + instructors.getInstructorTitle(Title.API));
+        System.out.println("Instructor title is: " + instructors.getInstructorTitle(Title.JAVA));
+        System.out.println("Instructor title is: " + instructors.getInstructorTitle(Title.SELENIUM));
 
         // Dependency injection
-        System.out.println("API working hours: " + instructors.getMentorsWorkingHours(java_bean_configuration_lab_1.Title.API));
-        System.out.println("JAVA working hours: " + instructors.getMentorsWorkingHours(java_bean_configuration_lab_1.Title.JAVA));
-        System.out.println("SELENIUM  working hours: " + instructors.getMentorsWorkingHours(java_bean_configuration_lab_1.Title.SELENIUM));
+        System.out.println("API working hours: " + instructors.getMentorsWorkingHours(Title.API));
+        System.out.println("JAVA working hours: " + instructors.getMentorsWorkingHours(Title.JAVA));
+        System.out.println("SELENIUM  working hours: " + instructors.getMentorsWorkingHours(Title.SELENIUM));
 
         // Dependency injection (override method from interface)
-        System.out.println("Mentor title is: " + instructors.getMentorTitle(java_bean_configuration_lab_1.Title.API));
-        System.out.println("Mentor title is: " + instructors.getMentorTitle(java_bean_configuration_lab_1.Title.JAVA));
-        System.out.println("Mentor title is: " + instructors.getMentorTitle(java_bean_configuration_lab_1.Title.SELENIUM));
+        System.out.println("Mentor title is: " + instructors.getMentorTitle(Title.API));
+        System.out.println("Mentor title is: " + instructors.getMentorTitle(Title.JAVA));
+        System.out.println("Mentor title is: " + instructors.getMentorTitle(Title.SELENIUM));
 
         System.out.println("Exact: " + students.calculateHours(Arrays.asList("Java Quizzes 1", "Selenium Topic 1", "Api Video 2")));
         System.out.println("Correct: " + students.calculateHours(Arrays.asList("Java Quizzes 2", "Selenium Topic 2", "Api Video 2")));
-        System.out.println("Wrong: " + students.calculateHours(Arrays.asList("Java Quizzes 1", "Selenium Topic 1", "Api Video 1")));
+        System.out.println("Wrong: " + students.calculateHours(Arrays.asList("Java Quizzes 1", "Selenium Topic 1", "Api Video 10")));
+
+        // Dependency injection
+        System.out.println("API working hours: " + instructors.retrieveStudentWorkingHours(Title.API));
+        System.out.println("JAVA working hours: " + instructors.retrieveStudentWorkingHours(Title.JAVA));
+        System.out.println("SELENIUM  working hours: " + instructors.retrieveStudentWorkingHours(Title.SELENIUM));
     }
 
 }

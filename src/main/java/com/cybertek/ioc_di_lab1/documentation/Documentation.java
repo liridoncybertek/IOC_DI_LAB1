@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Documentation {
-    private Map<String, Integer> videosDummyData = new HashMap<String, Integer>();
+    private final Map<String, Integer> videosDummyData = new HashMap<String, Integer>();
     private final static Map<String, Integer> quizzesDummyData = new HashMap<String, Integer>();
-    private Map<String, Integer> topicsDummyData = new HashMap<String, Integer>();
+    private final Map<String, Integer> topicsDummyData = new HashMap<String, Integer>();
 
     static {
         quizzesDummyData.put("Java Quizzes 1", 7);
