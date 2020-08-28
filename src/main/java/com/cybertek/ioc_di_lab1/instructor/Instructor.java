@@ -10,5 +10,5 @@ public interface Instructor {
      *
      * @return name of instructor.
      */
-    String getInstructorTitle(Title title);
+    String getMentorTitle(Title title);
 }

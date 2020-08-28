@@ -26,7 +26,7 @@ public class Mentors implements Instructor {
         }
     }
 
-    public String getInstructorTitle(Title title) {
+    public String getMentorTitle(Title title) {
         switch (title) {
             case API:
                 return "Api Mentor";

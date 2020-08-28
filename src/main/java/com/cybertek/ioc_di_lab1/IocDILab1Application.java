@@ -18,9 +18,9 @@ public class IocDILab1Application {
         // Declare student bean.
         Student students = bean.getBean(Student.class);
 
-        System.out.println("Instructor title is: " + instructors.getInstructorTitle(Title.API));
-        System.out.println("Instructor title is: " + instructors.getInstructorTitle(Title.JAVA));
-        System.out.println("Instructor title is: " + instructors.getInstructorTitle(Title.SELENIUM));
+        System.out.println("Instructor title is: " + instructors.getMentorTitle(Title.API));
+        System.out.println("Instructor title is: " + instructors.getMentorTitle(Title.JAVA));
+        System.out.println("Instructor title is: " + instructors.getMentorTitle(Title.SELENIUM));
 
         // Dependency injection
         System.out.println("API working hours: " + instructors.getMentorsWorkingHours(Title.API));

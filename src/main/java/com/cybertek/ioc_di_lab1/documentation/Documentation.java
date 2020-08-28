@@ -10,12 +10,7 @@ public class Documentation {
     private final Map<String, Integer> topicsDummyData = new HashMap<String, Integer>();
 
     static {
-        quizzesDummyData.put("Java Quizzes 1", 7);
-        quizzesDummyData.put("Java Quizzes 2", 5);
-        quizzesDummyData.put("Selenium Quizzes 1", 9);
-        quizzesDummyData.put("Selenium Quizzes 2", 4);
-        quizzesDummyData.put("Api Quizzes 1", 4);
-        quizzesDummyData.put("Api Quizzes 2", 2);
+       // WRITE YOUR CODE HERE..
     }
 
     public Documentation() {
@@ -45,9 +40,7 @@ public class Documentation {
      */
     public Map<String, Integer> getDocumentationDummyData() {
         Map<String, Integer> dummyData = new HashMap<String, Integer>();
-        dummyData.putAll(videosDummyData);
-        dummyData.putAll(topicsDummyData);
-        dummyData.putAll(quizzesDummyData);
+        //WRITE YOUR CODE HERE...
         return dummyData;
     }
 
