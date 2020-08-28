@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class Instructors implements Instructor {
 
@@ -38,7 +40,7 @@ public class Instructors implements Instructor {
      * @param title instructorTitle {@link Title}
      * @return instructor title as string {@link String}
      */
-    public String getMentorTitle(Title title) {
+    public String getInstructorTitle(Title title) {
         switch (title) {
             case API:
                 return this.apiTitle;
@@ -67,8 +69,8 @@ public class Instructors implements Instructor {
      * @param title send title as paramter {@link Title}
      * @return Mentor title.
      */
-    public String readMentorTitle(Title title) {
-        return mentors.getMentorTitle(title);
+    public String getMentorTitle(Title title) {
+        return mentors.getInstructorTitle(title);
     }
 
     /**
